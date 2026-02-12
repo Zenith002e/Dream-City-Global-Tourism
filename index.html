@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Dream City Global Tourism | Travel Smarter</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ================= GLOBAL ================= */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Poppins', sans-serif; background: #f8f9fb; color: #222; }
+a { text-decoration: none; color: inherit; }
+
+/* ================= NAV ================= */
+nav {
+  position: absolute;
+  top: 40px;
+  left: 10%;
+  right: 10%;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+nav h1 { font-size: 30px; font-weight: 700; }
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+  margin-left: auto;
+}
+nav ul li a {
+  position: relative;
+  padding-bottom: 6px;
+}
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #ffb703;
+  transition: width 0.3s;
+}
+nav ul li a:hover::after { width: 100%; }
+
+/* ================= HOME / HERO ================= */
+header {
+  min-height: 100vh;
+  position: relative;
+  color: white;
+  padding: 48px 10%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Slideshow */
+.slideshow {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+.slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+.slide.active { opacity: 1; }
+
+.slideshow::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(15,32,39,0.65), rgba(15,32,39,0.85));
+}
+
+/* Hero Text */
+.hero {
+  max-width: 620px;
+}
+.hero h2 { font-size: 52px; margin-bottom: 22px; }
+.hero p { font-size: 18px; margin-bottom: 36px; }
+.hero button {
+  padding: 16px 34px;
+  background: #ffb703;
+  border: none;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Slider dots + timeline */
+.slider-controls {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.dot.active { background: rgba(255,255,255,0.8); }
+.dot::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 0;
+  background: #ffb703;
+}
+.dot.active::after {
+  animation: progress 5s linear forwards;
+}
+@keyframes progress {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* ================= SECTIONS ================= */
+section {
+  padding: 90px 10%;
+}
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* ================= SERVICES ================= */
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 36px;
+}
+.card {
+  background: white;
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+.card:hover { transform: translateY(-8px); }
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+/* ================= TOURS ================= */
+.tours {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 36px;
+}
+
+/* ================= CONTACT ================= */
+.contact {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  nav ul { display: none; }
+  .hero h2 { font-size: 38px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HOME ================= -->
+<header id="home">
+
+  <div class="slideshow">
+    <div class="slide active" style="background-image:url('homeimages/slide1.jpg')"></div>
+    <div class="slide" style="background-image:url('homeimages/slide2.jpg')"></div>
+    <div class="slide" style="background-image:url('homeimages/slide3.jpg')"></div>
+  </div>
+
+  <nav>
+    <h1>Dream City Global Tourism</h1>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#tours">Tours</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <h2>Explore the World With Confidence</h2>
+    <p>International & domestic tours, customized travel plans, visa assistance and insurance.</p>
+    <button onclick="location.href='#contact'">Plan Your Trip</button>
+  </div>
+
+  <div class="slider-controls">
+    <div class="dot active" data-slide="0"></div>
+    <div class="dot" data-slide="1"></div>
+    <div class="dot" data-slide="2"></div>
+  </div>
+</header>
+
+<!-- ================= SERVICES ================= -->
+<section id="services">
+  <div class="section-title">
+    <h3>Our Services</h3>
+    <p>Everything you need for a smooth travel experience</p>
+  </div>
+
+  <div class="services">
+
+    <div class="card">
+      <img src="serviceimages/international.jpg" alt="International Tours">
+      <h4>International Tours</h4>
+      <p>
+        Well-planned international trips with flights, hotels,
+        sightseeing, and complete travel support.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="serviceimages/domestic.jpg" alt="Domestic Tours">
+      <h4>Domestic Tours</h4>
+      <p>
+        Comfortable and curated travel experiences across
+        popular destinations in India.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="serviceimages/customized.jpg" alt="Customized Tours">
+      <h4>Customized Tours</h4>
+      <p>
+        Personalized travel plans designed around your
+        budget, schedule, and preferences.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="serviceimages/insurance.jpg" alt="Travel Insurance">
+      <h4>Travel Insurance</h4>
+      <p>
+        Travel insurance coverage for medical emergencies,
+        cancellations, and unexpected situations.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="serviceimages/visa.jpg" alt="Visa Assistance">
+      <h4>Visa Assistance</h4>
+      <p>
+        Complete visa support including documentation,
+        application filing, and guidance.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- ================= TOURS ================= -->
+<section id="tours">
+  <div class="section-title">
+    <h3>Popular Tours</h3>
+    <p>Handpicked destinations loved by our travelers</p>
+  </div>
+
+  <div class="tours">
+
+    <div class="card">
+      <img src="tourimages/goa.jpg" alt="Goa Tour">
+      <h4>Goa</h4>
+      <p>
+        Beachside stays, nightlife, water sports,
+        and relaxed coastal vibes.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="tourimages/kashmir.jpg" alt="Kashmir Tour">
+      <h4>Kashmir</h4>
+      <p>
+        Snow-capped mountains, scenic valleys,
+        houseboats, and peaceful landscapes.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="tourimages/kerala.jpg" alt="Kerala Tour">
+      <h4>Kerala</h4>
+      <p>
+        Backwaters, hill stations, greenery,
+        and calm nature-focused travel.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="tourimages/dubai.jpg" alt="Dubai Tour">
+      <h4>Dubai</h4>
+      <p>
+        Luxury shopping, desert safaris,
+        modern attractions, and city life.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+<section id="contact">
+  <div class="section-title">
+    <h3>Contact Us</h3>
+    <p>Let’s plan your next journey together</p>
+  </div>
+
+  <div class="contact-card">
+    <div class="contact-item">
+      <span>Email</span>
+      <p>dreamcityglobaltourism@gmail.com</p>
+    </div>
+
+    <div class="contact-item">
+      <span>Phone</span>
+      <p>+91 XXXXX XXXXX</p>
+    </div>
+
+    <div class="contact-item">
+      <span>Location</span>
+      <p>India</p>
+    </div>
+
+    <div class="contact-cta">
+      <p>
+        Have a destination in mind or need help choosing one?
+        Get in touch and our team will assist you with everything.
+      </p>
+      <a href="mailto:dreamcityglobaltourism@gmail.com" class="contact-btn">
+        Get in Touch
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<script>
+/* ================= SLIDER LOGIC ================= */
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.dot');
+let current = 0;
+let interval = setInterval(nextSlide, 5000);
+
+function showSlide(i) {
+  slides.forEach(s => s.classList.remove('active'));
+  dots.forEach(d => d.classList.remove('active'));
+  slides[i].classList.add('active');
+  dots[i].classList.add('active');
+  current = i;
+  reset();
+}
+function nextSlide() {
+  showSlide((current + 1) % slides.length);
+}
+function reset() {
+  clearInterval(interval);
+  interval = setInterval(nextSlide, 5000);
+}
+dots.forEach(d => d.onclick = () => showSlide(+d.dataset.slide));
+
+/* Swipe support */
+let startX = 0;
+document.querySelector('.slideshow').addEventListener('touchstart', e => {
+  startX = e.touches[0].clientX;
+},{passive:true});
+document.querySelector('.slideshow').addEventListener('touchend', e => {
+  let endX = e.changedTouches[0].clientX;
+  if (startX - endX > 50) nextSlide();
+  if (endX - startX > 50) showSlide((current - 1 + slides.length) % slides.length);
+},{passive:true});
+</script>
+
+</body>
+</html>

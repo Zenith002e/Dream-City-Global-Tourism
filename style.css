@@ -1,0 +1,52 @@
+body{font-family:Poppins,sans-serif;} nav{display:flex;} ul{margin-left:auto;display:flex;gap:20px;}
+
+/* ================= CONTACT ================= */
+.contact-card {
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  display: grid;
+  gap: 24px;
+}
+
+.contact-item span {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #777;
+}
+
+.contact-item p {
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 6px;
+}
+
+.contact-cta {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.contact-cta p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.contact-btn {
+  display: inline-block;
+  padding: 14px 32px;
+  background: #ffb703;
+  color: #111;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
