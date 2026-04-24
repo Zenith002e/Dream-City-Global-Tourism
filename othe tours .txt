@@ -1,0 +1,169 @@
+<div class="card">
+      <img src="tourimages/kashmir.jpg" alt="Kashmir Tour">
+      <h4>Kashmir</h4>
+      <p>
+        Snow-capped mountains, scenic valleys,
+        houseboats, and peaceful landscapes.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="tourimages/kerala.jpg" alt="Kerala Tour">
+      <h4>Kerala</h4>
+      <p>
+        Backwaters, hill stations, greenery,
+        and calm nature-focused travel.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="tourimages/dubai.jpg" alt="Ooty - Mysore Tour">
+      <h4>Ooty - Mysore</h4>
+      <p>
+        Serene hill stations, botanical gardens,
+        and royal heritage.
+      </p>
+    </div>
+
+     <div class="card">
+      <img src="tourimages/himachal.jpg" alt="Himachal Tour">
+      <h4>Himachal</h4>
+      <p>
+        Mountain retreats, adventure sports,
+        and serene hill station vibes.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="tourimages/himachal.jpg" alt="Sikkim - Darjeeling Tour">
+      <h4>Sikkim - Darjeeling</h4>
+      <p>
+        Himalayan beauty, monasteries, tea gardens,
+        and peaceful mountain vibes.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="tourimages/himachal.jpg" alt="Rajastan Tour">
+      <h4>Rajastan</h4>
+      <p>
+        Desert forts, palaces, vibrant culture,
+        and rich history.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="tourimages/himachal.jpg" alt="Assam - Meghalaya Tour">
+      <h4>Assam - Meghalaya</h4>
+      <p>
+        Lush greenery, waterfalls, tea gardens,
+        and unique tribal culture.
+      </p>
+    </div>
+
+      <div class="card">
+      <img src="tourimages/himachal.jpg" alt="Dubai Tour">
+      <h4>Dubai</h4>
+      <p>
+        Modern cityscape, desert adventures,
+        luxury shopping, and vibrant culture.
+      </p>
+    </div>
+
+      <div class="card">
+      <img src="tourimages/himachal.jpg" alt="Singapor Tour">
+      <h4>Singapore</h4>
+      <p>
+        Futuristic city, gardens, diverse culture,
+        and vibrant urban experiences.
+      </p>
+    </div>
+
+      <div class="card">
+      <img src="tourimages/himachal.jpg" alt="Thailand Tour">
+      <h4>Thailand</h4>
+      <p>
+        Tropical beaches, rich culture,
+        and vibrant street food.
+      </p>
+    </div>
+
+      <div class="card">
+      <img src="tourimages/himachal.jpg" alt="Vietnam Tour">
+      <h4>Vietnam</h4>
+      <p>
+        Lush landscapes, rich history,
+        and vibrant culture.
+      </p>
+    </div>
+
+      <div class="card">
+      <img src="tourimages/himachal.jpg" alt="Shrilanka Tour">
+      <h4>Shrilanka</h4>
+      <p>
+        Tropical beaches, rich culture,
+        and vibrant street food.
+      </p>
+    </div>
+
+      <div class="card">
+      <img src="tourimages/himachal.jpg" alt="Philipines Tour">
+      <h4>Philipines</h4>
+      <p>
+        Tropical beaches, rich culture,
+        and vibrant street food.
+      </p>
+    </div>
+
+      <div class="card">
+      <img src="tourimages/himachal.jpg" alt="Bali Tour">
+      <h4>Bali</h4>
+      <p>
+        Tropical beaches, rich culture,
+        and vibrant street food.
+      </p>
+    </div>
+
+      <div class="card">
+      <img src="tourimages/himachal.jpg" alt="Georgia Tour">
+      <h4>Georgia</h4>
+      <p>
+        Stunning landscapes, rich culture,
+        and vibrant street food.
+      </p>
+    </div>
+
+
+
+
+
+    <header id="home">
+
+  <div class="slideshow">
+    <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1593693411515-c20261bcad6e?q=80&w=1169&auto=format&fit=crop')"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/flagged/photo-1559717201-fbb671ff56b7?q=80&w=1171&auto=format&fit=crop')"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1658891283935-fc955a7ebd66?q=80&w=1170&auto=format&fit=crop')"></div>
+  </div>
+
+  <nav>
+    <h1>Dream City Global Tourism</h1>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="tours.html">Tours</a></li> 
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <h2>Explore the World With Confidence</h2>
+    <p>International & domestic tours, customized travel plans, visa assistance and insurance.</p>
+    <button onclick="location.href='tours.html'">Plan Your Trip</button>
+  </div>
+
+  <div class="slider-controls">
+    <div class="dot active" data-slide="0"></div>
+    <div class="dot" data-slide="1"></div>
+    <div class="dot" data-slide="2"></div>
+  </div>
+</header>
