@@ -25,12 +25,13 @@ nav {
   align-items: center;
   z-index: 10;
 }
-nav h1 { font-size: 30px; font-weight: 700; }
+nav h1 { font-size: 30px; font-weight: 700; color: white; }
 nav ul {
   list-style: none;
   display: flex;
   gap: 32px;
   margin-left: auto;
+  color: white;
 }
 nav ul li a {
   position: relative;
@@ -91,11 +92,14 @@ header {
 .hero button {
   padding: 16px 34px;
   background: #ffb703;
+  color: #0f2027;
   border: none;
   font-weight: 600;
   border-radius: 8px;
   cursor: pointer;
+  transition: transform 0.2s;
 }
+.hero button:hover { transform: scale(1.05); }
 
 /* Slider dots + timeline */
 .slider-controls {
@@ -177,6 +181,87 @@ section {
   text-align: center;
 }
 
+.contact-card {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+.contact-item { margin-bottom: 20px; }
+.contact-item span { font-weight: 700; color: #ffb703; display: block; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
+.contact-item p { font-size: 18px; color: #333; font-weight: 600; }
+.contact-cta { margin-top: 30px; border-top: 1px solid #eee; padding-top: 30px; }
+.contact-cta p { font-size: 14px; color: #666; margin-bottom: 20px; }
+.contact-btn { display: inline-block; padding: 14px 30px; background: #0f2027; color: white; border-radius: 8px; font-weight: 600; transition: background 0.3s; }
+.contact-btn:hover { background: #ffb703; color: #0f2027; }
+
+/* ================= POPUP STYLES ================= */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 32, 39, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+.popup-overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+.popup-content {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 450px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+  transform: translateY(30px) scale(0.95);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.popup-overlay.show .popup-content {
+  transform: translateY(0) scale(1);
+}
+.close-popup {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  line-height: 1;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.close-popup:hover { color: #e63946; }
+.popup-content h2 { font-size: 28px; color: #0f2027; margin-bottom: 10px; }
+.popup-content h2 span { color: #e63946; display: block; font-size: 32px; }
+.popup-content p { font-size: 15px; color: #555; margin-bottom: 25px; line-height: 1.6; }
+.popup-btn {
+  display: inline-block;
+  padding: 14px 30px;
+  background: #ffb703;
+  color: #0f2027;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.popup-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 183, 3, 0.4);
+}
+
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
   nav ul { display: none; }
@@ -187,7 +272,6 @@ section {
 
 <body>
 
-<!-- ================= HOME ================= -->
 <header id="home">
 
   <div class="slideshow">
@@ -219,7 +303,6 @@ section {
   </div>
 </header>
 
-<!-- ================= SERVICES ================= -->
 <section id="services">
   <div class="section-title">
     <h3>Our Services</h3>
@@ -274,7 +357,7 @@ section {
     </div>
 
      <div class="card">
-      <img src="https://productimages.withfloats.com/serviceimages/tile/66e04db7fb564407d5b4b299Flight-Tickets-Rule" alt="Visa Assistance">
+      <img src="https://productimages.withfloats.com/serviceimages/tile/66e04db7fb564407d5b4b299Flight-Tickets-Rule" alt="Flight Booking">
       <h4>Flight Booking</h4>
       <p>
         Convenient flight booking services with competitive prices and flexible options.
@@ -282,7 +365,7 @@ section {
     </div>
 
      <div class="card">
-      <img src="https://www.relimoney.com/assets/img/rates-banner.png" alt="Visa Assistance">
+      <img src="https://www.relimoney.com/assets/img/rates-banner.png" alt="Forex">
       <h4>Forex (Currency Exchange) </h4>
       <p>
         Seamless currency exchange services for a smooth travel experience.
@@ -292,9 +375,6 @@ section {
   </div>
 </section>
 
-
-
-<!-- ================= TOURS ================= -->
 <section id="tours">
   <div class="section-title">
     <h3>Popular Tours</h3>
@@ -303,7 +383,7 @@ section {
 
   <div class="tours">
 
-<div class="card">
+    <div class="card">
       <img src="https://images.unsplash.com/photo-1619837374214-f5b9eb80876d?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Ladakh Tour">
       <h4>Ladakh</h4>
       <p>
@@ -342,8 +422,6 @@ section {
   </div>
 </section>
 
-
-<!-- ================= CONTACT ================= -->
 <section id="contact">
   <div class="section-title">
     <h3>Contact Us</h3>
@@ -378,6 +456,18 @@ section {
   </div>
 </section>
 
+<footer style="background: #0f2027; color: white; padding: 40px 10%; text-align: center;">
+  <p>&copy; 2026 Dream City Global Tourism. Travel with confidence.</p>
+</footer>
+
+<div class="popup-overlay" id="promo-popup">
+  <div class="popup-content">
+    <span class="close-popup" id="close-popup">&times;</span>
+    <h2><span>Biggest Sale</span> of the Year!</h2>
+    <p>Book now with us and get exclusive discounted coupons for your upcoming dream vacation.</p>
+    <a href="tours.html" class="popup-btn">Get Discounted Coupons</a>
+  </div>
+</div>
 
 <script>
 /* ================= SLIDER LOGIC ================= */
@@ -413,6 +503,29 @@ document.querySelector('.slideshow').addEventListener('touchend', e => {
   if (startX - endX > 50) nextSlide();
   if (endX - startX > 50) showSlide((current - 1 + slides.length) % slides.length);
 },{passive:true});
+
+/* ================= POPUP LOGIC ================= */
+const popup = document.getElementById('promo-popup');
+const closeBtn = document.getElementById('close-popup');
+
+// Show popup after 1.5 seconds of page load
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    popup.classList.add('show');
+  }, 1500);
+});
+
+// Close popup on 'X' click
+closeBtn.addEventListener('click', () => {
+  popup.classList.remove('show');
+});
+
+// Close popup if user clicks outside the white box
+window.addEventListener('click', (e) => {
+  if (e.target === popup) {
+    popup.classList.remove('show');
+  }
+});
 </script>
 
 </body>
