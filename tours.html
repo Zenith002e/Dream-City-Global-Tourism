@@ -212,13 +212,12 @@ section { padding: 60px 10%; }
  
    <div class="tours-grid">
     
-    <a href="package-details.html?id=ladakh" class="tour-card">
+    <a href="package-details.html?id=ladakh" class="tour-card" data-category="domestic">
       <img src="https://images.unsplash.com/photo-1619837374214-f5b9eb80876d?q=80&w=687&auto=format&fit=crop" alt="Ladakh">
       <div class="tour-info">
         <h4>Leh Bike Expedition</h4>
         <p>[Fixed Departure Dates]</p>
-        <p>An 6-day bike adventure in Ladakh offers thrilling rides across high mountain passes, scenic landscapes, and hidden routes in the “Land of High Passes.”
-The journey includes iconic and once-restricted destinations like Hanle, Umling La, and Pangong, promising an unforgettable experience.</p>
+        <p>An 6-day bike adventure in Ladakh offers thrilling rides across high mountain passes, scenic landscapes, and hidden routes in the “Land of High Passes.”</p>
         <div class="tour-meta">
           <div class="price-info">
             <span class="price-label">Starting from</span>
@@ -230,13 +229,11 @@ The journey includes iconic and once-restricted destinations like Hanle, Umling 
       </div>
     </a>
 
-    <a href="package-details.html?id=kashmir" class="tour-card">
+    <a href="package-details.html?id=kashmir" class="tour-card" data-category="domestic honeymoon">
       <img src="https://plus.unsplash.com/premium_photo-1697730150003-26a1d469adb4?q=80&w=1074&auto=format&fit=crop" alt="Kashmir">
       <div class="tour-info">
         <h4>Kashmir Valley</h4>
-        <p>A paradise of snow-capped mountains, serene lakes, and lush green meadows.
-Famous for its breathtaking scenery, rich culture, and peaceful atmosphere.
-Perfect destination for nature lovers, adventure seekers, and unforgettable memories.</p>
+        <p>A paradise of snow-capped mountains, serene lakes, and lush green meadows. Perfect destination for nature lovers and unforgettable memories.</p>
         <div class="tour-meta">
           <div class="price-info">
             <span class="price-label">Starting from</span>
@@ -248,13 +245,11 @@ Perfect destination for nature lovers, adventure seekers, and unforgettable memo
       </div>
     </a>
     
-    <a href="package-details.html?id=shrilanka" class="tour-card">
+    <a href="package-details.html?id=shrilanka" class="tour-card" data-category="international ">
       <img src="https://media.cntravellerme.com/photos/64d0bd05b661e4b5f9cf240c/16:9/w_4928,h_2772,c_limit/1288609237" alt="Shrilanka">
       <div class="tour-info">
         <h4>Shrilanka</h4>
-        <p>A tropical paradise of golden beaches, lush tea plantations, and ancient heritage sites.
-Famous for its scenic beauty, vibrant culture, and diverse wildlife experiences.
-Perfect destination for relaxation, adventure, and unforgettable island memories.</p>
+        <p>A tropical paradise of golden beaches, lush tea plantations, and ancient heritage sites. Perfect destination for relaxation and adventure.</p>
         <div class="tour-meta">
           <div class="price-info">
             <span class="price-label">Starting from</span>
@@ -266,14 +261,12 @@ Perfect destination for relaxation, adventure, and unforgettable island memories
       </div>
     </a>
 
-    <a href="package-details.html?id=dubai" class="tour-card">
+    <a href="package-details.html?id=dubai" class="tour-card" data-category="international honeymoon">
       <img src="https://t3.ftcdn.net/jpg/02/80/77/38/360_F_280773846_J1En85VylkBFv3OFATtNahEEGZPCApMK.jpg" alt="Dubai">
       <div class="tour-info">
         <h4>Dubai</h4>
         <p>[Every Friday Fixed Departure]</p>
-        <p>A modern paradise of iconic skyscrapers, luxury shopping, and golden desert landscapes.
-Famous for its world-class attractions, vibrant nightlife, and rich Arabian culture.
-Perfect destination for adventure, luxury, and unforgettable travel experiences.</p>
+        <p>A modern paradise of iconic skyscrapers, luxury shopping, and golden desert landscapes. Perfect destination for luxury travel experiences.</p>
         <div class="tour-meta">
           <div class="price-info">
             <span class="price-label">Starting from</span>
@@ -285,8 +278,7 @@ Perfect destination for adventure, luxury, and unforgettable travel experiences.
       </div>
     </a>
 
-
-  </div>
+</div>
 </section>
 
 <footer style="background: #0f2027; color: white; padding: 40px 10%; text-align: center;">
@@ -294,12 +286,27 @@ Perfect destination for adventure, luxury, and unforgettable travel experiences.
 </footer>
 
 <script>
-    // Simple filter toggle logic (Visual only for now)
     function filterTours(category) {
+        // 1. Update the active button visually
         const buttons = document.querySelectorAll('.filter-btn');
         buttons.forEach(btn => btn.classList.remove('active'));
         event.target.classList.add('active');
-        // You can add logic here to hide/show specific cards if needed
+        
+        // 2. Get all tour cards
+        const cards = document.querySelectorAll('.tour-card');
+        
+        // 3. Loop through cards and show/hide based on the category
+        cards.forEach(card => {
+            // Get the categories assigned to the card
+            const cardCategories = card.getAttribute('data-category');
+            
+            // If "all" is selected OR the card's categories include the chosen category
+            if (category === 'all' || cardCategories.includes(category)) {
+                card.style.display = 'block'; // Show the card
+            } else {
+                card.style.display = 'none';  // Hide the card
+            }
+        });
     }
 </script>
 
