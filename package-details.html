@@ -47,117 +47,91 @@
     </div>
 
     <div class="itinerary-grid">
-        <div class="main-itinerary" id="itinerary-list">
-            </div>
+        <div class="main-itinerary" id="itinerary-list"></div>
 
         <aside class="sidebar">
             <h4>Package Includes</h4>
-            <ul id="inclusions-list">
-            </ul>
+            <ul id="inclusions-list"></ul>
             <a href="mailto:dreamcityglobaltourism@gmail.com" class="book-btn" id="mail-link">Enquire for Booking</a>
         </aside>
     </div>
 </div>
 
 <script>
-    // 1. Data Object (The database of your trips)
     const tourData = {
         "ladakh": {
             title: "Leh Bike Expedition",
             duration: "6 Days / 5 Nights",
             desc: "A journey through high passes, crystal lakes, and ancient monasteries.",
-            inclusions: [
-                "Triple-sharing camps/hotels (double for couples); breakfast & dinner included (except Day 1 breakfast)",
-                "Inner line permits, airport transfers, and Royal Enfield Himalayan with fuel",
-                "Helmets, backup vehicle, mechanic, tour marshal, and daily bike maintenance",
-                "First aid kit, 24/7 oxygen cylinder, and all planned sightseeing/excursions"
-            ],
+            inclusions: ["Triple-sharing camps", "Fuel & Mechanics", "First Aid & Oxygen", "Permits"],
             days: [
-                { day: "Day 1", title: "Arrival in Leh", detail: "Transfer to hotel. Complete day rest for acclimatization to high altitude." },
-                { day: "Day 2", title: "Leh Local Sightseeing", detail: "Visit Shanti Stupa, Leh Palace, and the Hall of Fame Museum." },
-                { day: "Day 3", title: "Leh to Nubra Valley", detail: "Drive via Khardung La (World's highest motorable road). Enjoy Camel Safari." },
-                { day: "Day 4", title: "Nubra to Pangong Lake", detail: "Travel to the famous Pangong Lake via Shyok river road." },
-                { day: "Day 5", title: "Pangong to Leh", detail: "Return to Leh. Evening free for shopping at Leh Market." },
-                { day: "Day 6", title: "Departure", detail: "Transfer to Leh airport." }
+                { 
+                    day: "Fixed Departure Dates", 
+                    title: "2026 Season", 
+                    detail: "APRIL: 10-17, 18-25, 24-01 | MAY: 02-09, 08-15, 16-23, 22-29, 30-06 | JUNE: 06-13, 12-19, 20-27 | JULY: 02-09, 10-17, 18-25, 24-31 | AUGUST: 01-08, 08-15, 14-21, 22-29 | SEPTEMBER: 04-11, 12-19, 18-25, 25-02" 
+                }, // Added the missing comma here to fix the error
+                { day: "Day 1", title: "Arrival in Leh", detail: "Rest for acclimatization." },
+                { day: "Day 2", title: "Leh Local Sightseeing", detail: "Shanti Stupa and Leh Palace." },
+                { day: "Day 3", title: "Leh to Nubra Valley", detail: "Via Khardung La." },
+                { day: "Day 4", title: "Nubra to Pangong Lake", detail: "Scenic drive via Shyok." },
+                { day: "Day 5", title: "Pangong to Leh", detail: "Return and market visit." },
+                { day: "Day 6", title: "Departure", detail: "Transfer to airport." }
             ]
         },
         "kashmir": {
             title: "Kashmir: Paradise on Earth",
             duration: "6 Days / 5 Nights",
             desc: "Experience the romance and beauty of the valley.",
-            inclusions: [
-                "accommodation on Twin Sharing basis",
-                "Daily Breakfast & Dinner",
-                "1 Hour Shikara Ride on Dal Lake",
-                "Welcome Drink on Arrival",
-                "All Transfers & Sightseeing by Private Vehicle",
-                "Toll tax, parking, and driver allowances"
-            ],
+            inclusions: ["Breakfast & Dinner", "Shikara Ride", "Private Vehicle", "All Taxes"],
             days: [
-                { day: "Day 1", title: "Srinagar Arrival", detail: "Check-in to a Deluxe Hotel. Enjoy an evening Shikara ride on Dal Lake." },
-                { day: "Day 2", title: "Srinagar to Pahalgam", detail: "Travel to Pahalgam, the Valley of Shepherds. Visit the beautiful Betaab Valley, Aru Valley, and Lidder River surroundings. Enjoy the natural beauty and peaceful atmosphere." },
-                { day: "Day 3", title: "Pahalgam to Srinagar by surface", detail: "Return to Srinagar by road. On arrival, visit the famous Mughal Gardens including Nishat Bagh and Shalimar Bagh, followed by a visit to the historic Shankaracharya Temple." },
-                { day: "Day 4", title: "Srinagar to Gulmarg", detail: "Drang by union vehicle, do horse ride, gandola ride, ATV ride" },
-                { day: "Day 5", title: "Srinagar to Sonmarg", detail: "Visit Thajiwas Glacier , Visit zero point via zojila pass by union vechile" },
-              //  { day: "Day 6", title: "Departure from srinagar", detail: "Transfer to Srinagar airport." }
+                { day: "Day 1", title: "Srinagar Arrival", detail: "Check-in and Shikara ride." },
+                { day: "Day 2", title: "Srinagar to Pahalgam", detail: "Visit Betaab and Aru Valleys." },
+                { day: "Day 3", title: "Pahalgam to Srinagar", detail: "Mughal Gardens visit." },
+                { day: "Day 4", title: "Srinagar to Gulmarg", detail: "Gondola and ATV rides." },
+                { day: "Day 5", title: "Srinagar to Sonmarg", detail: "Thajiwas Glacier and Zojila Pass." },
+                { day: "Day 6", title: "Departure", detail: "Transfer to Srinagar airport." }
             ]
         },
         "shrilanka": {
             title: "Shrilanka: A Tropical Paradise",
             duration: "6 Days / 5 Nights",
-            desc: "Experience the vibrant culture and stunning beaches of this island nation.",
-            inclusions: [
-                "Accommodation on Twin/Triple Sharing basis",
-                "Daily Breakfast & Dinner at the hotel",
-                "Transfers by AC Volvo Bus",
-                "Local Sightseeing by Private Cab",
-                "All applicable taxes and parking fees"
-            ],
+            desc: "Explore vibrant culture and stunning beaches.",
+            inclusions: ["Hotel Stay", "Daily Meals", "AC Volvo Bus", "Local Sightseeing"],
             days: [
-                { day: "Day 1", title: "Arrival", detail: "Colombo Airport to Colombo hotel." },
-                { day: "Day 2", title: "Local Sightseeing", detail: "Colombo - Sightseeing and Excursions in Colombo" },
-                { day: "Day 3", title: "Colombo to Kandy ", detail: "Transfer and En Route Pinnawala" },
-                { day: "Day 4", title: "Kandy", detail: "Nuwara Eliya Sightseeing day tour" },
-                { day: "Day 5", title: "Kandy Excursion", detail: "Sightseeing and Excursions around KandyExplore the local markets and cafes." },
-                { day: "Day 6", title: "Departure", detail: "Kandy to Colombo Airport - Departure" }
+                { day: "Day 1", title: "Arrival", detail: "Airport to Colombo hotel." },
+                { day: "Day 2", title: "Colombo Sightseeing", detail: "Explore the capital." },
+                { day: "Day 3", title: "To Kandy", detail: "Visit Pinnawala Elephant Orphanage." },
+                { day: "Day 4", title: "Nuwara Eliya", detail: "Tea plantations day tour." },
+                { day: "Day 5", title: "Kandy Excursion", detail: "Temple of the Tooth visit." },
+                { day: "Day 6", title: "Departure", detail: "Return to airport." }
             ]
         },
         "dubai": {
             title: "Dubai: The City of Gold",
             duration: "6 Days / 5 Nights",
-            desc: "Experience the luxury and excitement of the UAE's most vibrant city.",
-            inclusions: [
-                "4 star hotel accommodation on twin sharing basis",
-                "All meals (breakfast, lunch, and dinner) included",
-                "Comfortable transfers by AC vehicle",
-                "Tour guide for all sightseeing tours",
-                "VAT included",
-            ],
+            desc: "Modern paradise and luxury experiences.",
+            inclusions: ["4-Star Hotel", "Full Board Meals", "Burj Khalifa Tickets", "Safari"],
             days: [
-                { day: "Day 1", title: "Arrival", detail: "Transport to Hotel in evening Dhow cruise marina with international buffet dinner" },
-                { day: "Day 2", title: "Local Sightseeing", detail: "Half Day Dubai City Tour , Burj Khalifa 124th/125th floor of peak with tickets" },
-                { day: "Day 3", title: "Full Day Sightseeing ", detail: "Dubai dolphinarium show, atlantis lost world aquarium" },
-                { day: "Day 4", title: "Dubai Excursion", detail: "Dubai Frame, Desert Safari with BBQ dinner" },
-                { day: "Day 5", title: "Abu Dhabi Excursion", detail: "Abu Dhabi City Tour with BAPS Temple and Grand Mosque" },
-                { day: "Day 6", title: "Departure", detail: "Shopping on your own, Airport Drop off" }
+                { day: "Day 1", title: "Arrival", detail: "Dhow Cruise Marina." },
+                { day: "Day 2", title: "Dubai City Tour", detail: "Burj Khalifa visit." },
+                { day: "Day 3", title: "Sightseeing", detail: "Dolphinarium and Atlantis." },
+                { day: "Day 4", title: "Desert Safari", detail: "BBQ dinner in the desert." },
+                { day: "Day 5", title: "Abu Dhabi", detail: "BAPS Temple and Grand Mosque." },
+                { day: "Day 6", title: "Departure", detail: "Last minute shopping and drop-off." }
             ]
-        },
+        }
     };
-
-    // 2. Logic to display the correct tour
+    
     const urlParams = new URLSearchParams(window.location.search);
     const tourId = urlParams.get('id');
 
     if (tourId && tourData[tourId]) {
         const tour = tourData[tourId];
-        
-        // Populate Header Data
         document.getElementById('package-title').innerText = tour.title;
         document.getElementById('package-duration').innerText = tour.duration;
         document.getElementById('package-desc').innerText = tour.desc;
         document.getElementById('mail-link').href = `mailto:dreamcityglobaltourism@gmail.com?subject=Booking Inquiry: ${tour.title}`;
 
-        // Populate Itinerary Days
         const list = document.getElementById('itinerary-list');
         tour.days.forEach(item => {
             const div = document.createElement('div');
@@ -166,19 +140,15 @@
             list.appendChild(div);
         });
 
-        // Populate Inclusions
         const inclusionsList = document.getElementById('inclusions-list');
         tour.inclusions.forEach(inc => {
             const li = document.createElement('li');
             li.innerText = inc;
             inclusionsList.appendChild(li);
         });
-
     } else {
         document.getElementById('package-title').innerText = "Package Not Found";
-        document.getElementById('package-desc').innerText = "Please select a valid tour package from the tours page.";
     }
 </script>
-
 </body>
 </html>
