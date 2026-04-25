@@ -267,6 +267,56 @@ section {
   nav ul { display: none; }
   .hero h2 { font-size: 38px; }
 }
+
+
+/* Hide hamburger by default (Desktop) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 101;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex; /* Show only on mobile */
+    position: absolute;
+    right: 20px;
+    top: 10px;
+  }
+
+  nav ul {
+    display: none; /* Hide standard menu */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: rgba(15, 32, 39, 0.95);
+    width: 200px;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: right;
+  }
+
+  /* When 'active' class is added via JS, show the menu */
+  nav ul.active {
+    display: flex;
+  }
+}
+
+
+
+
+
 </style>
 </head>
 
@@ -289,6 +339,40 @@ section {
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
+
+
+
+
+<nav>
+  <h1 onclick="location.href='#home'">Dream City Global Tourism</h1>
+  
+  <div class="menu-toggle" id="mobile-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <ul id="nav-list">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="tours.html">Tours</a></li> 
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   <div class="hero">
     <h2>Explore the World With Confidence</h2>
@@ -525,6 +609,27 @@ window.addEventListener('click', (e) => {
   if (e.target === popup) {
     popup.classList.remove('show');
   }
+});
+</script>
+
+
+
+
+
+
+<script>
+const menuToggle = document.getElementById('mobile-menu');
+const navList = document.getElementById('nav-list');
+
+menuToggle.addEventListener('click', () => {
+  navList.classList.toggle('active');
+});
+
+// Close the menu automatically when a link is clicked
+document.querySelectorAll('#nav-list a').forEach(link => {
+  link.addEventListener('click', () => {
+    navList.classList.remove('active');
+  });
 });
 </script>
 
