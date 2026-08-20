@@ -15,12 +15,66 @@ html { scroll-behavior: smooth; }
 body { font-family: 'Poppins', sans-serif; background: #f8f9fb; color: #222; }
 a { text-decoration: none; color: inherit; }
 
+
+
+/* ================= BRANDING ================= */
+.site-brand {
+  position: absolute;
+  top: 2px;
+  left: 3.8%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.site-logo-link {
+  position: static;
+  display: block;
+}
+
+.site-logo {
+  width: 105px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 8px rgba(0,0,0,0.28));
+  cursor: pointer;
+}
+
+.site-brand-name {
+  color: white;
+  font-size: 36px;
+  font-weight: 700;
+  white-space: nowrap;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 768px) {
+  .site-brand {
+    top: 15px;
+    left: 20px;
+    gap: 8px;
+  }
+
+  .site-logo {
+    width: 90px;
+  }
+
+  .site-brand-name {
+    font-size: 17px;
+    max-width: 180px;
+    white-space: normal;
+    line-height: 1.15;
+  }
+}
+
 /* ================= NAV ================= */
 nav {
   position: absolute;
   top: 40px;
-  left: 10%;
-  right: 10%;
+  left: 3.8%;
+  right: 3.8%;
   display: flex;
   align-items: center;
   z-index: 10;
@@ -145,6 +199,93 @@ section {
   margin-bottom: 50px;
 }
 
+
+/* ================= ABOUT US ================= */
+
+.about-section {
+  background: #ffffff;
+}
+
+.about-content {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.about-text h3 {
+  font-size: 34px;
+  color: #0f2027;
+  margin-bottom: 18px;
+}
+
+.about-text h3 span {
+  color: #ffb703;
+}
+
+.about-text p {
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.about-highlight {
+  background: #f8f9fb;
+  padding: 18px;
+  border-radius: 12px;
+  border-left: 4px solid #ffb703;
+}
+
+.about-highlight strong {
+  display: block;
+  color: #0f2027;
+  margin-bottom: 5px;
+}
+
+.about-highlight span {
+  font-size: 13px;
+  color: #666;
+}
+
+.about-image {
+  min-height: 390px;
+  border-radius: 18px;
+  background:
+    linear-gradient(rgba(15,32,39,.15), rgba(15,32,39,.25)),
+    url('https://images.unsplash.com/photo-1694716021376-d44da3f54e8a?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
+    center/cover;
+  box-shadow: 0 12px 30px rgba(0,0,0,.10);
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-image {
+    min-height: 280px;
+    order: -1;
+  }
+
+  .about-text h3 {
+    font-size: 28px;
+  }
+
+  .about-highlights {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ================= SERVICES ================= */
 .services {
   display: grid;
@@ -197,6 +338,42 @@ section {
 .contact-cta p { font-size: 14px; color: #666; margin-bottom: 20px; }
 .contact-btn { display: inline-block; padding: 14px 30px; background: #0f2027; color: white; border-radius: 8px; font-weight: 600; transition: background 0.3s; }
 .contact-btn:hover { background: #ffb703; color: #0f2027; }
+
+
+/* ================= ENQUIRY FORM ================= */
+.enquiry-section{background:#f1f4f6}.enquiry-wrap{max-width:900px;margin:auto}.enquiry-form{background:white;padding:40px;border-radius:16px;box-shadow:0 12px 30px rgba(0,0,0,.08);text-align:left}.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.form-group{display:flex;flex-direction:column}.form-group.full{grid-column:1/-1}.form-group label{font-size:14px;font-weight:600;margin-bottom:8px;color:#0f2027}.form-group input,.form-group select,.form-group textarea{width:100%;padding:13px 14px;border:1px solid #ddd;border-radius:8px;font-family:Poppins,sans-serif;font-size:14px;outline:none}.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:#ffb703;box-shadow:0 0 0 3px rgba(255,183,3,.12)}.form-group textarea{min-height:120px;resize:vertical}.enquiry-submit{display:block;margin:28px auto 0;padding:14px 34px;border:none;border-radius:8px;background:#ffb703;color:#0f2027;font-family:Poppins,sans-serif;font-weight:700;cursor:pointer}.enquiry-submit:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(255,183,3,.35)}.enquiry-note{text-align:center;color:#666;font-size:13px;margin-top:14px}@media(max-width:768px){.enquiry-form{padding:25px 20px}.form-grid{grid-template-columns:1fr}.form-group.full{grid-column:auto}}
+
+/* ================= TRAVEL ENQUIRY ================= */
+
+.enquiry-section {
+  background: #f1f4f6;
+}
+
+.google-form-window {
+  width: 100%;
+  max-width: 850px;
+  height: 850px;
+  margin: auto;
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+  border: 1px solid #e5e5e5;
+}
+
+.google-form-window iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .google-form-window {
+    height: 900px;
+    border-radius: 12px;
+  }
+}
 
 /* ================= POPUP STYLES ================= */
 .popup-overlay {
@@ -324,6 +501,14 @@ section {
 
 <header id="home">
 
+  <div class="site-brand">
+    <a href="#home" class="site-logo-link" aria-label="Dream City Global Tourism Home">
+      <img src="DCGT Logo_.png" alt="DCGT Dream City Global Tourism" class="site-logo">
+    </a>
+    <div class="site-brand-name">Dream City Global Tourism</div>
+  </div>
+
+
   <div class="slideshow">
     <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1593693411515-c20261bcad6e?q=80&w=1169&auto=format&fit=crop')"></div>
     <div class="slide" style="background-image:url('https://images.unsplash.com/flagged/photo-1559717201-fbb671ff56b7?q=80&w=1171&auto=format&fit=crop')"></div>
@@ -331,11 +516,13 @@ section {
   </div>
 
   <nav>
-    <h1>Dream City Global Tourism</h1>
+    
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#services">Services</a></li>
+      <li><a href="#about">About Us</a></li>
       <li><a href="tours.html">Tours</a></li> 
+      <li><a href="#enquiry">Enquiry</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -344,7 +531,7 @@ section {
 
 
 <nav>
-  <h1 onclick="location.href='#home'">Dream City Global Tourism</h1>
+  
   
   <div class="menu-toggle" id="mobile-menu">
     <span></span>
@@ -355,8 +542,10 @@ section {
   <ul id="nav-list">
     <li><a href="#home">Home</a></li>
     <li><a href="#services">Services</a></li>
+    <li><a href="#about">About Us</a></li>
     <li><a href="tours.html">Tours</a></li> 
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#enquiry">Enquiry</a></li>
+      <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
@@ -432,7 +621,7 @@ section {
     </div>
 
     <div class="card">
-      <img src="https://visadone.com/wp-content/uploads/2023/09/indian-passport-with-airoplane-on-world-map.jpg" alt="Visa Assistance">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMqbX-MGCnHQxnpMSYGZD5OFrVAhYJ62ae6sgO4tHNB3BuqV1aRZqa9-EE&s=10" alt="Visa Assistance">
       <h4>Visa Assistance</h4>
       <p>
         Complete visa support including documentation,
@@ -459,6 +648,69 @@ section {
   </div>
 </section>
 
+
+<!-- ================= ABOUT US ================= -->
+<section id="about" class="about-section">
+
+  <div class="section-title">
+    <h3>About Us</h3>
+    <p>Your journey starts with the right travel partner</p>
+  </div>
+
+  <div class="about-content">
+
+    <div class="about-text">
+      <h3>Travel Better With <span>Dream City Global Tourism</span></h3>
+
+      <p>
+        At Dream City Global Tourism, we believe that exploring the world should be affordable for everyone, 
+        regardless of their budget. We have built our reputation on unwavering trust, exceptional service, 
+        and honoring our commitments to every traveler we assist.
+      </p>
+
+      <p>
+        From domestic and international getaways to custom itineraries, 
+        flights, visas, insurance, and forex, 
+        we offer a complete suite of travel services under one roof.
+      </p>
+
+      <p>
+        Whether you know exactly where you want to go or need inspiration, 
+        the DCGT team is dedicated to providing reliable, 
+        stress-free travel planning you can count on.
+      </p>
+
+      <div class="about-highlights">
+
+        <div class="about-highlight">
+          <strong>Customized Travel</strong>
+          <span>Trips designed around your needs and schedule.</span>
+        </div>
+
+        <div class="about-highlight">
+          <strong>Complete Support</strong>
+          <span>Travel assistance from planning to your journey.</span>
+        </div>
+
+        <div class="about-highlight">
+          <strong>Domestic & International</strong>
+          <span>Explore destinations in India and around the world.</span>
+        </div>
+
+        <div class="about-highlight">
+          <strong>Travel Made Simple</strong>
+          <span>One place for your essential travel services.</span>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="about-image"></div>
+
+  </div>
+
+</section>
+
 <section id="tours">
   <div class="section-title">
     <h3>Popular Tours</h3>
@@ -468,7 +720,7 @@ section {
   <div class="tours">
 
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1619837374214-f5b9eb80876d?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Ladakh Tour">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPnIdO5jAtavyJIJkOphv6tLSn7-A1Miz0jBsFPLcJMxbozezp51Mt1UdN&s=10" alt="Ladakh Tour">
       <h4>Ladakh</h4>
       <p>
         Stunning landscapes, vibrant culture,
@@ -506,6 +758,32 @@ section {
   </div>
 </section>
 
+
+
+
+<!-- ================= TRAVEL ENQUIRY ================= -->
+<section id="enquiry" class="enquiry-section">
+
+  <div class="section-title">
+    <h3>Travel Enquiry</h3>
+    <p>Fill out the form below and our team will get back to you.</p>
+  </div>
+
+  <div class="google-form-window">
+    <iframe
+      src="https://docs.google.com/forms/d/e/1FAIpQLSfQBNEQ2X4pT_370mtvLVgzB-SiECL6Misofv4vfcr_ExVjhg/viewform?embedded=true"
+      title="Travel Enquiry Form"
+      loading="lazy"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0"
+    >
+      Loading enquiry form…
+    </iframe>
+  </div>
+
+</section>
+
 <section id="contact">
   <div class="section-title">
     <h3>Contact Us</h3>
@@ -521,6 +799,7 @@ section {
     <div class="contact-item">
       <span>Phone</span>
       <p>+91 98233 85848</p>
+      <p>+91 73501 34479</p>
     </div>
 
     <div class="contact-item">
