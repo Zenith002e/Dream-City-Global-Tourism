@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plan your trip | Dream City Global Tourism</title>
+<meta name="description" content="Tell Dream City Global Tourism where you want to go and send your trip request on WhatsApp or email.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top"><div class="bar">
+  <a class="brand" href="index.html"><img src="DCGT_Logo_.png" alt="" width="50" height="42"><span><b>Dream City</b><small>Global Tourism</small></span></a>
+  <input type="checkbox" id="nt" hidden><label for="nt" class="burger" aria-label="Menu"><i></i></label>
+  <nav>
+    <a href="index.html#services">Services</a><a href="index.html#about">About</a><a href="tours.html">Tours</a><a href="contact.html">Contact</a>
+    <a class="btn gold" href="enquiry.html">Enquire</a>
+  </nav>
+</div></header>
+
+<section class="page-head" style="--hi:url('https://images.unsplash.com/photo-1619837374214-f5b9eb80876d?q=80&w=1600&auto=format&fit=crop')"><svg class="cloud" style="top:110px;--d:60s;--s:1;animation-delay:-10s" viewBox="0 0 120 60" aria-hidden="true"><g fill="#fff"><circle cx="35" cy="38" r="20"/><circle cx="62" cy="28" r="26"/><circle cx="90" cy="38" r="20"/><rect x="35" y="38" width="55" height="20"/></g></svg><svg class="cloud" style="top:220px;--d:85s;--s:.7;animation-delay:-40s" viewBox="0 0 120 60" aria-hidden="true"><g fill="#fff"><circle cx="35" cy="38" r="20"/><circle cx="62" cy="28" r="26"/><circle cx="90" cy="38" r="20"/><rect x="35" y="38" width="55" height="20"/></g></svg><svg class="plane" viewBox="0 0 64 64" aria-hidden="true"><path fill="#FFC107" d="M58 6 40 24 12 16l-4 4 22 12-10 12-10-2-3 4 11 6 6 10 4-4-2-10 10-10 12 20 4-4-6-26 12-16z"/></svg><div class="wrap"><h1>Plan your trip</h1><p>Tell us what you have in mind. We will take it from there.</p></div></section>
+<main class="sec enq-page"><div class="wrap enq-grid">
+  <form id="f" novalidate>
+    <fieldset><legend><b>1</b>Where do you want to go?</legend><div class="pills"><label class="pill"><input type="radio" name="dest" value="Ladakh" data-k="leh,ladakh"><span>Ladakh</span></label><label class="pill"><input type="radio" name="dest" value="Kashmir" data-k="kashmir"><span>Kashmir</span></label><label class="pill"><input type="radio" name="dest" value="Himachal" data-k="himachal"><span>Himachal</span></label><label class="pill"><input type="radio" name="dest" value="Kerala" data-k="kerala"><span>Kerala</span></label><label class="pill"><input type="radio" name="dest" value="Sikkim - Darjeeling" data-k="sikkim"><span>Sikkim - Darjeeling</span></label><label class="pill"><input type="radio" name="dest" value="Mussoorie - Nainital" data-k="mussoorie"><span>Mussoorie - Nainital</span></label><label class="pill"><input type="radio" name="dest" value="Rajasthan" data-k="rajasthan"><span>Rajasthan</span></label><label class="pill"><input type="radio" name="dest" value="Assam - Meghalaya" data-k="assam"><span>Assam - Meghalaya</span></label><label class="pill"><input type="radio" name="dest" value="Ooty - Mysore" data-k="ooty"><span>Ooty - Mysore</span></label><label class="pill"><input type="radio" name="dest" value="Sri Lanka" data-k="sri lanka,shrilanka"><span>Sri Lanka</span></label><label class="pill"><input type="radio" name="dest" value="Dubai" data-k="dubai"><span>Dubai</span></label><label class="pill"><input type="radio" name="dest" value="Thailand" data-k="thailand"><span>Thailand</span></label><label class="pill"><input type="radio" name="dest" value="Singapore" data-k="singapore"><span>Singapore</span></label><label class="pill"><input type="radio" name="dest" value="Vietnam" data-k="vietnam"><span>Vietnam</span></label><label class="pill"><input type="radio" name="dest" value="Bali" data-k="bali"><span>Bali</span></label><label class="pill"><input type="radio" name="dest" value="Philippines" data-k="philippines"><span>Philippines</span></label><label class="pill"><input type="radio" name="dest" value="Georgia" data-k="georgia"><span>Georgia</span></label><label class="pill"><input type="radio" name="dest" value="Not sure yet" data-k=""><span>Not sure yet</span></label></div></fieldset>
+    <fieldset><legend><b>2</b>When and who?</legend>
+      <label class="fld">Travel dates<input id="dates" placeholder="For example: mid-December, or 12 to 18 March"></label>
+      <div class="row"><span>Travellers</span><div class="step"><button type="button" data-s="-1" aria-label="Fewer travellers">&minus;</button><output id="pax">2</output><button type="button" data-s="1" aria-label="More travellers">+</button></div></div>
+      <p class="sub">Budget per person</p><div class="pills"><label class="pill"><input type="radio" name="budget" value="Under ₹20,000"><span>Under ₹20,000</span></label><label class="pill"><input type="radio" name="budget" value="₹20,000 to ₹40,000"><span>₹20,000 to ₹40,000</span></label><label class="pill"><input type="radio" name="budget" value="₹40,000 to ₹70,000"><span>₹40,000 to ₹70,000</span></label><label class="pill"><input type="radio" name="budget" value="Above ₹70,000"><span>Above ₹70,000</span></label><label class="pill"><input type="radio" name="budget" value="Not sure yet"><span>Not sure yet</span></label></div>
+    </fieldset>
+    <fieldset><legend><b>3</b>Who are we talking to?</legend>
+      <div class="two"><label class="fld">Name<input id="name" autocomplete="name" required></label><label class="fld">Phone<input id="phone" type="tel" autocomplete="tel" required></label></div>
+      <label class="fld">Email (optional)<input id="email" type="email" autocomplete="email"></label>
+      <label class="fld">Anything else we should know?<textarea id="notes" rows="3" placeholder="Honeymoon, kids, visa needed, special dates..."></textarea></label>
+    </fieldset>
+    <p class="err" id="err" role="alert"></p>
+    <div class="send"><button type="button" class="btn gold" id="wa">Send on WhatsApp</button><button type="button" class="btn out" id="em">Send by email</button></div>
+    <p class="fine">This opens WhatsApp or your email app with your details already filled in. Nothing is sent until you press send there.</p>
+  </form>
+  <aside class="ticket" aria-label="Your trip summary">
+    <div class="tk-top"><small>Trip request</small><div class="route"><span>Pune</span><i class="flightline"><svg viewBox="0 0 64 64"><path fill="#0D2B4E" d="M58 6 40 24 12 16l-4 4 22 12-10 12-10-2-3 4 11 6 6 10 4-4-2-10 10-10 12 20 4-4-6-26 12-16z"/></svg></i><span id="t-dest">Anywhere</span></div></div>
+    <dl><div><dt>Passenger</dt><dd id="t-name">Your name</dd></div><div><dt>Dates</dt><dd id="t-dates">Flexible</dd></div><div><dt>Travellers</dt><dd id="t-pax">2</dd></div><div><dt>Budget</dt><dd id="t-bud">Not sure yet</dd></div></dl>
+    <div class="stub"><span class="bars"></span><small>Dream City Global Tourism</small></div>
+  </aside>
+</div></main>
+
+<footer class="foot"><div class="wrap foot-in"><span>&copy; 2026 Dream City Global Tourism</span><span>We plan<i>|</i>You experience<i>|</i>We care</span></div></footer>
+<script>
+(function(){
+var $=function(s){return document.querySelector(s)},f=$('#f');
+function val(n){var r=f.querySelector('input[name='+n+']:checked');return r?r.value:''}
+function data(){return{dest:val('dest'),budget:val('budget'),dates:$('#dates').value.trim(),pax:$('#pax').textContent,name:$('#name').value.trim(),phone:$('#phone').value.trim(),email:$('#email').value.trim(),notes:$('#notes').value.trim()}}
+function paint(){var d=data();$('#t-dest').textContent=d.dest||'Anywhere';$('#t-name').textContent=d.name||'Your name';$('#t-dates').textContent=d.dates||'Flexible';$('#t-pax').textContent=d.pax;$('#t-bud').textContent=d.budget||'Not sure yet'}
+f.addEventListener('input',paint);f.addEventListener('change',paint);
+document.querySelectorAll('.step button').forEach(function(b){b.onclick=function(){$('#pax').textContent=Math.max(1,Math.min(30,+$('#pax').textContent+ +b.dataset.s));paint()}});
+function msg(d){return "Hi Dream City! I'd like to plan a trip.\n\nDestination: "+(d.dest||'Not sure yet')+"\nDates: "+(d.dates||'Flexible')+"\nTravellers: "+d.pax+"\nBudget per person: "+(d.budget||'Not sure yet')+"\n\nName: "+d.name+"\nPhone: "+d.phone+(d.email?"\nEmail: "+d.email:"")+(d.notes?"\nNotes: "+d.notes:"")}
+function ok(d){var e=$('#err');if(!d.name||!d.phone){e.textContent='Please add your name and phone number so we can reach you.';e.classList.remove('shake');void e.offsetWidth;e.classList.add('shake');(d.name?$('#phone'):$('#name')).focus();return false}e.textContent='';return true}
+$('#wa').onclick=function(){var d=data();if(ok(d))window.open('https://wa.me/919823385848?text='+encodeURIComponent(msg(d)),'_blank')};
+$('#em').onclick=function(){var d=data();if(ok(d))location.href='mailto:dreamcityglobaltourism@gmail.com?subject='+encodeURIComponent('Trip enquiry: '+(d.dest||'Not sure yet'))+'&body='+encodeURIComponent(msg(d))};
+var q=new URLSearchParams(location.search).get('dest');
+if(q){q=q.toLowerCase();f.querySelectorAll('input[name=dest]').forEach(function(i){if(i.dataset.k.split(',').some(function(k){return k&&q.indexOf(k)>-1}))i.checked=true})}
+paint();
+})();
+</script>
+<script src="site.js" defer></script>
+</body>
+</html>
