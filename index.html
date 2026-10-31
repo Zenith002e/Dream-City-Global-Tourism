@@ -2,915 +2,119 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dream City Global Tourism | Tours, visas, flights and forex in Pune</title>
+<meta name="description" content="Domestic and international tours, flights, visa assistance, travel insurance and forex from one team in Pune.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<title>Dream City Global Tourism | Travel Smarter</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-/* ================= GLOBAL ================= */
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { font-family: 'Poppins', sans-serif; background: #f8f9fb; color: #222; }
-a { text-decoration: none; color: inherit; }
-
-
-
-/* ================= BRANDING ================= */
-.site-brand {
-  position: absolute;
-  top: 10px;
-  left: 3.8%;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.site-logo-link {
-  position: static;
-  display: block;
-}
-
-.site-logo {
-  width: 90px;
-  height: auto;
-  display: block;
-  object-fit: contain;
-  filter: drop-shadow(0 3px 8px rgba(0,0,0,0.28));
-  cursor: pointer;
-}
-
-.site-brand-name {
-  color: white;
-  font-size: 36px;
-  font-weight: 700;
-  white-space: nowrap;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
-}
-
-@media (max-width: 768px) {
-  .site-brand {
-    top: 15px;
-    left: 20px;
-    gap: 8px;
-  }
-
-  .site-logo {
-    width: 80px;
-  }
-
-  .site-brand-name {
-    font-size: 17px;
-    max-width: 180px;
-    white-space: normal;
-    line-height: 1.15;
-  }
-}
-
-/* ================= NAV ================= */
-nav {
-  position: absolute;
-  top: 40px;
-  left: 3.8%;
-  right: 3.8%;
-  display: flex;
-  align-items: center;
-  z-index: 10;
-}
-nav h1 { font-size: 30px; font-weight: 700; color: white; }
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 32px;
-  margin-left: auto;
-  color: white;
-}
-nav ul li a {
-  position: relative;
-  padding-bottom: 6px;
-}
-nav ul li a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  background: #ffb703;
-  transition: width 0.3s;
-}
-nav ul li a:hover::after { width: 100%; }
-
-/* ================= HOME / HERO ================= */
-header {
-  min-height: 100vh;
-  position: relative;
-  color: white;
-  padding: 48px 10%;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-}
-
-/* Slideshow */
-.slideshow {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-}
-.slide {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  transition: opacity 1s ease;
-}
-.slide.active { opacity: 1; }
-
-.slideshow::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(rgba(15, 32, 39, 0), rgba(15,32,39,0.85));
-}
-
-/* Hero Text */
-.hero {
-  max-width: 620px;
-}
-.hero h2 { font-size: 52px; margin-bottom: 22px; }
-.hero p { font-size: 18px; margin-bottom: 36px; }
-.hero button {
-  padding: 16px 34px;
-  background: #ffb703;
-  color: #0f2027;
-  border: none;
-  font-weight: 600;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.2s;
-}
-.hero button:hover { transform: scale(1.05); }
-
-/* Slider dots + timeline */
-.slider-controls {
-  position: absolute;
-  bottom: 36px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 12px;
-  z-index: 10;
-}
-.dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.4);
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-}
-.dot.active { background: rgba(255,255,255,0.8); }
-.dot::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  width: 0;
-  background: #ffb703;
-}
-.dot.active::after {
-  animation: progress 5s linear forwards;
-}
-@keyframes progress {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-/* ================= SECTIONS ================= */
-section {
-  padding: 90px 10%;
-}
-.section-title {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-
-/* ================= ABOUT US ================= */
-
-.about-section {
-  background: #ffffff;
-}
-
-.about-content {
-  max-width: 1000px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 50px;
-  align-items: center;
-}
-
-.about-text h3 {
-  font-size: 34px;
-  color: #0f2027;
-  margin-bottom: 18px;
-}
-
-.about-text h3 span {
-  color: #ffb703;
-}
-
-.about-text p {
-  color: #555;
-  line-height: 1.8;
-  margin-bottom: 16px;
-}
-
-.about-highlights {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
-  margin-top: 25px;
-}
-
-.about-highlight {
-  background: #f8f9fb;
-  padding: 18px;
-  border-radius: 12px;
-  border-left: 4px solid #ffb703;
-}
-
-.about-highlight strong {
-  display: block;
-  color: #0f2027;
-  margin-bottom: 5px;
-}
-
-.about-highlight span {
-  font-size: 13px;
-  color: #666;
-}
-
-.about-image {
-  min-height: 390px;
-  border-radius: 18px;
-  background:
-    linear-gradient(rgba(15,32,39,.15), rgba(15,32,39,.25)),
-    url('https://images.unsplash.com/photo-1694716021376-d44da3f54e8a?q=80&w=688&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')
-    center/cover;
-  box-shadow: 0 12px 30px rgba(0,0,0,.10);
-}
-
-@media (max-width: 768px) {
-  .about-content {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .about-image {
-    min-height: 280px;
-    order: -1;
-  }
-
-  .about-text h3 {
-    font-size: 28px;
-  }
-
-  .about-highlights {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ================= SERVICES ================= */
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 36px;
-}
-.card {
-  background: white;
-  padding: 28px;
-  border-radius: 16px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-  transition: transform 0.3s;
-}
-.card:hover { transform: translateY(-8px); }
-.card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 16px;
-}
-
-/* ================= TOURS ================= */
-.tours {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 36px;
-}
-
-/* ================= CONTACT ================= */
-.contact {
-  max-width: 600px;
-  margin: auto;
-  text-align: center;
-}
-
-.contact-card {
-  background: white;
-  padding: 40px;
-  border-radius: 16px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-  max-width: 600px;
-  margin: auto;
-  text-align: center;
-}
-.contact-item { margin-bottom: 20px; }
-.contact-item span { font-weight: 700; color: #ffb703; display: block; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
-.contact-item p { font-size: 18px; color: #333; font-weight: 600; }
-.contact-cta { margin-top: 30px; border-top: 1px solid #eee; padding-top: 30px; }
-.contact-cta p { font-size: 14px; color: #666; margin-bottom: 20px; }
-.contact-btn { display: inline-block; padding: 14px 30px; background: #0f2027; color: white; border-radius: 8px; font-weight: 600; transition: background 0.3s; }
-.contact-btn:hover { background: #ffb703; color: #0f2027; }
-
-
-/* ================= ENQUIRY FORM ================= */
-.enquiry-section{background:#f1f4f6}.enquiry-wrap{max-width:900px;margin:auto}.enquiry-form{background:white;padding:40px;border-radius:16px;box-shadow:0 12px 30px rgba(0,0,0,.08);text-align:left}.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.form-group{display:flex;flex-direction:column}.form-group.full{grid-column:1/-1}.form-group label{font-size:14px;font-weight:600;margin-bottom:8px;color:#0f2027}.form-group input,.form-group select,.form-group textarea{width:100%;padding:13px 14px;border:1px solid #ddd;border-radius:8px;font-family:Poppins,sans-serif;font-size:14px;outline:none}.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:#ffb703;box-shadow:0 0 0 3px rgba(255,183,3,.12)}.form-group textarea{min-height:120px;resize:vertical}.enquiry-submit{display:block;margin:28px auto 0;padding:14px 34px;border:none;border-radius:8px;background:#ffb703;color:#0f2027;font-family:Poppins,sans-serif;font-weight:700;cursor:pointer}.enquiry-submit:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(255,183,3,.35)}.enquiry-note{text-align:center;color:#666;font-size:13px;margin-top:14px}@media(max-width:768px){.enquiry-form{padding:25px 20px}.form-grid{grid-template-columns:1fr}.form-group.full{grid-column:auto}}
-
-/* ================= TRAVEL ENQUIRY ================= */
-
-.enquiry-section {
-  background: #f1f4f6;
-}
-
-.google-form-window {
-  width: 100%;
-  max-width: 850px;
-  height: 850px;
-  margin: auto;
-  background: white;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.10);
-  border: 1px solid #e5e5e5;
-}
-
-.google-form-window iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  display: block;
-}
-
-@media (max-width: 768px) {
-  .google-form-window {
-    height: 900px;
-    border-radius: 12px;
-  }
-}
-
-/* ================= POPUP STYLES ================= */
-.popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(15, 32, 39, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.4s ease, visibility 0.4s ease;
-}
-.popup-overlay.show {
-  opacity: 1;
-  visibility: visible;
-}
-.popup-content {
-  background: white;
-  padding: 40px 30px;
-  border-radius: 16px;
-  text-align: center;
-  max-width: 450px;
-  width: 90%;
-  position: relative;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
-  transform: translateY(30px) scale(0.95);
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-.popup-overlay.show .popup-content {
-  transform: translateY(0) scale(1);
-}
-.close-popup {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  font-size: 28px;
-  line-height: 1;
-  color: #999;
-  cursor: pointer;
-  transition: color 0.3s;
-}
-.close-popup:hover { color: #e63946; }
-.popup-content h2 { font-size: 28px; color: #0f2027; margin-bottom: 10px; }
-.popup-content h2 span { color: #e63946; display: block; font-size: 32px; }
-.popup-content p { font-size: 15px; color: #555; margin-bottom: 25px; line-height: 1.6; }
-.popup-btn {
-  display: inline-block;
-  padding: 14px 30px;
-  background: #ffb703;
-  color: #0f2027;
-  text-decoration: none;
-  font-weight: 700;
-  border-radius: 8px;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.popup-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(255, 183, 3, 0.4);
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-  nav ul { display: none; }
-  .hero h2 { font-size: 38px; }
-}
-
-
-/* Hide hamburger by default (Desktop) */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  z-index: 101;
-}
-
-.menu-toggle span {
-  width: 25px;
-  height: 3px;
-  background: white;
-  border-radius: 2px;
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: flex; /* Show only on mobile */
-    position: absolute;
-    right: 20px;
-    top: 10px;
-  }
-
-  nav ul {
-    display: none; /* Hide standard menu */
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: rgba(15, 32, 39, 0.95);
-    width: 200px;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: right;
-  }
-
-  /* When 'active' class is added via JS, show the menu */
-  nav ul.active {
-    display: flex;
-  }
-}
-
-
-
-
-
-</style>
 </head>
-
 <body>
 
-<header id="home">
-
-  <div class="site-brand">
-    <a href="#home" class="site-logo-link" aria-label="Dream City Global Tourism Home">
-      <img src="DCGT Logo_.png" alt="DCGT Dream City Global Tourism" class="site-logo">
-    </a>
-    <div class="site-brand-name">Dream City Global Tourism</div>
-  </div>
-
-
-  <div class="slideshow">
-    <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1593693411515-c20261bcad6e?q=80&w=1169&auto=format&fit=crop')"></div>
-    <div class="slide" style="background-image:url('https://images.unsplash.com/flagged/photo-1559717201-fbb671ff56b7?q=80&w=1171&auto=format&fit=crop')"></div>
-    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1658891283935-fc955a7ebd66?q=80&w=1170&auto=format&fit=crop')"></div>
-  </div>
-
+<header class="top"><div class="bar">
+  <a class="brand" href="index.html"><img src="DCGT_Logo_.png" alt="" width="50" height="42"><span><b>Dream City</b><small>Global Tourism</small></span></a>
+  <input type="checkbox" id="nt" hidden><label for="nt" class="burger" aria-label="Menu"><i></i></label>
   <nav>
-    
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#about">About Us</a></li>
-      <li><a href="tours.html">Tours</a></li> 
-      <li><a href="#enquiry">Enquiry</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <a href="index.html#services">Services</a><a href="index.html#about">About</a><a href="tours.html">Tours</a><a href="contact.html">Contact</a>
+    <a class="btn gold" href="enquiry.html">Enquire</a>
   </nav>
+</div></header>
 
-
-
-
-<nav>
-  
-  
-  <div class="menu-toggle" id="mobile-menu">
-    <span></span>
-    <span></span>
-    <span></span>
+<section class="hero">
+  <div class="photo" role="img" aria-label="Travel destinations">
+    <i data-cap="Browse all tour packages" data-href="tours.html" style="background-image:url('https://images.unsplash.com/photo-1593693411515-c20261bcad6e?q=80&w=1600&auto=format&fit=crop')"></i>
+    <i data-cap="Ladakh, from ₹19,799" data-href="package-details.html?id=ladakh" style="background-image:url('https://images.unsplash.com/photo-1619837374214-f5b9eb80876d?q=80&w=1600&auto=format&fit=crop')"></i>
+    <i data-cap="Kashmir, from ₹13,099" data-href="package-details.html?id=kashmir" style="background-image:url('https://plus.unsplash.com/premium_photo-1697730150003-26a1d469adb4?q=80&w=1600&auto=format&fit=crop')"></i>
+    <i data-cap="Browse all tour packages" data-href="tours.html" style="background-image:url('https://images.unsplash.com/flagged/photo-1559717201-fbb671ff56b7?q=80&w=1600&auto=format&fit=crop')"></i>
+    <i data-cap="Singapore, from ₹55,000" data-href="package-details.html?id=singapore" style="background-image:url('https://images.unsplash.com/photo-1574227492706-f65b24c3688a?q=80&w=1600&auto=format&fit=crop')"></i>
+    <i data-cap="Himachal, from ₹15,500" data-href="package-details.html?id=himachal" style="background-image:url('https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=1600&auto=format&fit=crop')"></i>
+    </div>
+  <div class="wrap hero-in">
+    <a class="sticker" href="package-details.html?id=dubai">Dubai from $429, fixed departure every Friday</a>
+    <h1>Pack your bags. We’ll sort the rest.</h1>
+    <p>Tours, flights, visas, insurance and forex from one friendly team in Pune.</p>
+    <div class="cta"><a class="btn gold" href="tours.html">See tour packages</a><a class="btn ghost" href="tel:+919823385848">Call +91 98233 85848</a></div>
   </div>
-
-  <ul id="nav-list">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#about">About Us</a></li>
-    <li><a href="tours.html">Tours</a></li> 
-    <li><a href="#enquiry">Enquiry</a></li>
-      <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <div class="hero">
-    <h2>Explore the World With Confidence</h2>
-    <p>International & domestic tours, customized travel plans, visa assistance and insurance.</p>
-    <button onclick="location.href='tours.html'">Plan Your Trip</button>
-  </div>
-
-  <div class="slider-controls">
-    <div class="dot active" data-slide="0"></div>
-    <div class="dot" data-slide="1"></div>
-    <div class="dot" data-slide="2"></div>
-  </div>
-</header>
-
-<section id="services">
-  <div class="section-title">
-    <h3>Our Services</h3>
-    <p>Everything you need for a smooth travel experience</p>
-  </div>
-
-  <div class="services">
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1576606970009-7ddc4229ced7?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="International Tours">
-      <h4>International Tours</h4>
-      <p>
-        Well-planned international trips with flights, hotels,
-        sightseeing, and complete travel support.
-      </p>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1598434192043-71111c1b3f41?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Domestic Tours">
-      <h4>Domestic Tours</h4>
-      <p>
-        Comfortable and curated travel experiences across
-        popular destinations in India.
-      </p>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1588979355313-6711a095465f?q=80&w=672&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Customized Tours">
-      <h4>Customized Tours</h4>
-      <p>
-        Personalized travel plans designed around your
-        budget, schedule, and preferences.
-      </p>
-    </div>
-
-    <div class="card">
-      <img src="https://cdn.prod.website-files.com/64b351c1d4e691cd90ad3d8f/68cc66d7bc62b01a6e5ba6d2_Travel%20Insurance%20for%20Canadians%20Everything%20You%20Need%20to%20Know%20Before%20Your%20Next%20Trip-min.png" alt="Travel Insurance">
-      <h4>Travel Insurance</h4>
-      <p>
-        Travel insurance coverage for medical emergencies,
-        cancellations, and unexpected situations.
-      </p>
-    </div>
-
-    <div class="card">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMqbX-MGCnHQxnpMSYGZD5OFrVAhYJ62ae6sgO4tHNB3BuqV1aRZqa9-EE&s=10" alt="Visa Assistance">
-      <h4>Visa Assistance</h4>
-      <p>
-        Complete visa support including documentation,
-        application filing, and guidance.
-      </p>
-    </div>
-
-     <div class="card">
-      <img src="https://productimages.withfloats.com/serviceimages/tile/66e04db7fb564407d5b4b299Flight-Tickets-Rule" alt="Flight Booking">
-      <h4>Flight Booking</h4>
-      <p>
-        Convenient flight booking services with competitive prices and flexible options.
-      </p>
-    </div>
-
-     <div class="card">
-      <img src="https://www.relimoney.com/assets/img/rates-banner.png" alt="Forex">
-      <h4>Forex (Currency Exchange) </h4>
-      <p>
-        Seamless currency exchange services for a smooth travel experience.
-      </p>
-    </div>
-
-  </div>
+  <svg class="badge" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="c" d="M60 60m-47 0a47 47 0 1 1 94 0a47 47 0 1 1-94 0"/></defs><circle cx="60" cy="60" r="59" fill="#FFC107"/><text><textPath href="#c" textLength="292" lengthAdjust="spacing">WE PLAN • YOU EXPERIENCE • WE CARE •</textPath></text><path fill="#0D2B4E" transform="translate(40 40) scale(.62)" d="M58 6 40 24 12 16l-4 4 22 12-10 12-10-2-3 4 11 6 6 10 4-4-2-10 10-10 12 20 4-4-6-26 12-16z"/></svg>
+  <svg class="plane" viewBox="0 0 64 64" aria-hidden="true"><path fill="#FFC107" d="M58 6 40 24 12 16l-4 4 22 12-10 12-10-2-3 4 11 6 6 10 4-4-2-10 10-10 12 20 4-4-6-26 12-16z"/></svg>
+  <div class="ctl"><a class="cap" href="tours.html"></a><div class="dots"></div></div>
+  <svg class="wave" viewBox="0 0 1440 110" preserveAspectRatio="none" aria-hidden="true"><path fill="#C89D45" d="M-100 55C140 5 380 105 620 55S1100 5 1340 55S1500 70 1540 55V110H-100Z"/><path fill="#fff" d="M0 80C260 30 520 120 780 75S1230 35 1440 80V110H0Z"/></svg>
 </section>
 
-
-<!-- ================= ABOUT US ================= -->
-<section id="about" class="about-section">
-
-  <div class="section-title">
-    <h3>About Us</h3>
-    <p>Your journey starts with the right travel partner</p>
+<section class="sec" id="tours">
+  <svg class="cloud" style="top:60px;--d:70s;--s:1" viewBox="0 0 120 60" aria-hidden="true"><g fill="#e6eef9"><circle cx="35" cy="38" r="20"/><circle cx="62" cy="28" r="26"/><circle cx="90" cy="38" r="20"/><rect x="35" y="38" width="55" height="20"/></g></svg><svg class="cloud" style="top:300px;--d:95s;--s:.7" viewBox="0 0 120 60" aria-hidden="true"><g fill="#e6eef9"><circle cx="35" cy="38" r="20"/><circle cx="62" cy="28" r="26"/><circle cx="90" cy="38" r="20"/><rect x="35" y="38" width="55" height="20"/></g></svg><svg class="cloud" style="top:520px;--d:60s;--s:1.2" viewBox="0 0 120 60" aria-hidden="true"><g fill="#e6eef9"><circle cx="35" cy="38" r="20"/><circle cx="62" cy="28" r="26"/><circle cx="90" cy="38" r="20"/><rect x="35" y="38" width="55" height="20"/></g></svg>
+  <div class="wrap">
+    <div class="sec-head"><span class="spark" style="left:250px;top:-8px">✦</span><span class="spark" style="left:330px;top:34px;animation-delay:-.8s;font-size:16px">✦</span><span class="spark" style="left:200px;top:46px;animation-delay:-1.6s;font-size:14px">✦</span><h2>Where to next?</h2><p>Starting prices. Every trip can be adjusted to your dates and budget.</p></div>
+    <div class="pnav"><button data-d="-1" aria-label="Previous">‹</button><button data-d="1" aria-label="Next">›</button></div>
   </div>
+  <div class="trail"><svg class="flight" viewBox="0 0 1600 480" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path id="fp" fill="none" stroke="#C89D45" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 14" d="M-20 300C200 120 420 420 700 250S1150 90 1380 230 1560 330 1640 200"/><g><animateMotion dur="16s" repeatCount="indefinite" rotate="auto"><mpath href="#fp"/></animateMotion><g transform="rotate(45) translate(-22 -22) scale(.7)"><path fill="#FFC107" stroke="#0D2B4E" stroke-width="2.5" stroke-linejoin="round" d="M58 6 40 24 12 16l-4 4 22 12-10 12-10-2-3 4 11 6 6 10 4-4-2-10 10-10 12 20 4-4-6-26 12-16z"/></g></g></svg>
+  <div class="posts">
+    <a class="post" href="package-details.html?id=ladakh"><img src="https://images.unsplash.com/photo-1619837374214-f5b9eb80876d?q=80&w=687&auto=format&fit=crop" alt="Ladakh" loading="lazy"><b><small>from</small>₹19,799</b><div><h3>Ladakh</h3><p>6 days / 5 nights</p></div></a>
+    <a class="post" href="package-details.html?id=kashmir"><img src="https://plus.unsplash.com/premium_photo-1697730150003-26a1d469adb4?q=80&w=1074&auto=format&fit=crop" alt="Kashmir" loading="lazy"><b><small>from</small>₹13,099</b><div><h3>Kashmir</h3><p>6 days / 5 nights</p></div></a>
+    <a class="post" href="package-details.html?id=himachal"><img src="https://www.himachal.exploreindia.in/wordpress/wp-content/uploads/2013/05/hp1.jpg" alt="Himachal" loading="lazy"><b><small>from</small>₹15,500</b><div><h3>Himachal</h3><p>6 days / 5 nights</p></div></a>
+    <a class="post" href="package-details.html?id=kerala"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFhlZxrGIPuE94kC3-lU2r02ztt5AuWHCc-g&s" alt="Kerala" loading="lazy"><b><small>from</small>₹11,920</b><div><h3>Kerala</h3><p>5 days / 4 nights</p></div></a>
+    <a class="post" href="package-details.html?id=shrilanka"><img src="https://media.cntravellerme.com/photos/64d0bd05b661e4b5f9cf240c/16:9/w_4928,h_2772,c_limit/1288609237" alt="Sri Lanka" loading="lazy"><b><small>from</small>₹37,999</b><div><h3>Sri Lanka</h3><p>6 days / 5 nights</p></div></a>
+    <a class="post" href="package-details.html?id=dubai"><img src="https://t3.ftcdn.net/jpg/02/80/77/38/360_F_280773846_J1En85VylkBFv3OFATtNahEEGZPCApMK.jpg" alt="Dubai" loading="lazy"><b><small>from</small>$429</b><div><h3>Dubai</h3><p>6 days / 5 nights</p></div></a>
+    <a class="post" href="package-details.html?id=bali"><img src="https://t4.ftcdn.net/jpg/02/70/88/09/360_F_270880962_TseSIvxgpcgxqzTA1tXO83gjjH434BHO.jpg" alt="Bali" loading="lazy"><b><small>from</small>₹39,999</b><div><h3>Bali</h3><p>5 days / 4 nights</p></div></a>
+    <a class="post" href="package-details.html?id=singapore"><img src="https://images.unsplash.com/photo-1574227492706-f65b24c3688a?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Singapore" loading="lazy"><b><small>from</small>₹55,000</b><div><h3>Singapore</h3><p>6 days / 5 nights</p></div></a>
+    </div></div>
+  <div class="wrap"><p class="more"><a class="link" href="tours.html">See all tours</a></p></div>
+</section>
 
-  <div class="about-content">
+<section class="sec band photo-bg up" style="--img:url('https://images.unsplash.com/photo-1619837374214-f5b9eb80876d?q=80&w=1600&auto=format&fit=crop')">
+  <div class="wrap"><h2>Not sure where to go?</h2><p>Tell us your budget and dates. We’ll suggest a trip and plan every part of it.</p><a class="btn gold" href="enquiry.html">Tell us your plan</a></div>
+</section>
 
-    <div class="about-text">
-      <h3>Travel Better With <span>Dream City Global Tourism</span></h3>
-
-      <p>
-        At Dream City Global Tourism, we believe that exploring the world should be affordable for everyone, 
-        regardless of their budget. We have built our reputation on unwavering trust, exceptional service, 
-        and honoring our commitments to every traveler we assist.
-      </p>
-
-      <p>
-        From domestic and international getaways to custom itineraries, 
-        flights, visas, insurance, and forex, 
-        we offer a complete suite of travel services under one roof.
-      </p>
-
-      <p>
-        Whether you know exactly where you want to go or need inspiration, 
-        the DCGT team is dedicated to providing reliable, 
-        stress-free travel planning you can count on.
-      </p>
-
-      <div class="about-highlights">
-
-        <div class="about-highlight">
-          <strong>Customized Travel</strong>
-          <span>Trips designed around your needs and schedule.</span>
-        </div>
-
-        <div class="about-highlight">
-          <strong>Complete Support</strong>
-          <span>Travel assistance from planning to your journey.</span>
-        </div>
-
-        <div class="about-highlight">
-          <strong>Domestic & International</strong>
-          <span>Explore destinations in India and around the world.</span>
-        </div>
-
-        <div class="about-highlight">
-          <strong>Travel Made Simple</strong>
-          <span>One place for your essential travel services.</span>
-        </div>
-
+<section class="sec" id="services">
+  <div class="wrap">
+    <div class="sec-head"><h2>One team, every part of the trip</h2><p>Book one service or the whole journey. You deal with the same people either way.</p></div>
+    <div class="tiles">
+      <a class="tile" href="enquiry.html"><i>🌏</i><h3>International tours</h3><p>Flights, hotels, sightseeing and support from start to finish.</p></a>
+      <a class="tile" href="enquiry.html"><i>🏔️</i><h3>Domestic tours</h3><p>Comfortable, curated trips across popular destinations in India.</p></a>
+      <a class="tile" href="enquiry.html"><i>🧭</i><h3>Customized tours</h3><p>Itineraries built around your budget, schedule and preferences.</p></a>
+      <a class="tile" href="enquiry.html"><i>✈️</i><h3>Flight booking</h3><p>Competitive fares with flexible options.</p></a>
+      <a class="tile" href="enquiry.html"><i>🛂</i><h3>Visa assistance</h3><p>Documentation, application filing and guidance.</p></a>
+      <a class="tile" href="enquiry.html"><i>🛡️</i><h3>Travel insurance</h3><p>Cover for medical emergencies, cancellations and the unexpected.</p></a>
+      <a class="tile" href="enquiry.html"><i>💱</i><h3>Forex</h3><p>Currency exchange sorted before you fly.</p></a>
+      <a class="tile" href="enquiry.html"><i>💬</i><h3>Something else?</h3><p>Ask us. If it helps your trip, we can probably arrange it.</p></a>
       </div>
-    </div>
-
-    <div class="about-image"></div>
-
-  </div>
-
-</section>
-
-<section id="tours">
-  <div class="section-title">
-    <h3>Popular Tours</h3>
-    <p>Handpicked destinations loved by our travelers</p>
-  </div>
-
-  <div class="tours">
-
-    <div class="card">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPnIdO5jAtavyJIJkOphv6tLSn7-A1Miz0jBsFPLcJMxbozezp51Mt1UdN&s=10" alt="Ladakh Tour">
-      <h4>Ladakh</h4>
-      <p>
-        Stunning landscapes, vibrant culture,
-        and unforgettable experiences.
-      </p>
-    </div>
-
-    <div class="card">
-      <img src="https://plus.unsplash.com/premium_photo-1697730150003-26a1d469adb4?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Kashmir Tour">
-      <h4>Kashmir</h4>
-      <p>
-        Paradise on Earth with breathtaking views,
-        serene lakes, and rich culture.
-      </p>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Himachal Tour">
-      <h4>Himachal</h4>
-      <p>
-        Stunning landscapes, vibrant culture,
-        and unforgettable experiences.
-      </p>
-    </div>
-
-    <div class="card">
-      <img src="https://www.distinctdestinations.in/DistinctDestinationsBackEndImg/BlogImage/sri-lanka-an-11-day-journey-through-culture-nature-and-heritage-L-distinctdestinations.jpg" alt="Shri Lanka Tour">
-      <h4>Shri Lanka</h4>
-      <p>
-        Tropical paradise with rich culture,
-        stunning beaches, and vibrant wildlife.
-      </p>
-    </div>
-
   </div>
 </section>
 
-
-
-
-<!-- ================= TRAVEL ENQUIRY ================= -->
-<section id="enquiry" class="enquiry-section">
-
-  <div class="section-title">
-    <h3>Travel Enquiry</h3>
-    <p>Fill out the form below and our team will get back to you.</p>
-  </div>
-
-  <div class="google-form-window">
-    <iframe
-      src="https://docs.google.com/forms/d/e/1FAIpQLSfQBNEQ2X4pT_370mtvLVgzB-SiECL6Misofv4vfcr_ExVjhg/viewform?embedded=true"
-      title="Travel Enquiry Form"
-      loading="lazy"
-      frameborder="0"
-      marginheight="0"
-      marginwidth="0"
-    >
-      Loading enquiry form…
-    </iframe>
-  </div>
-
-</section>
-
-<section id="contact">
-  <div class="section-title">
-    <h3>Contact Us</h3>
-    <p>Let’s plan your next journey together</p>
-  </div>
-
-  <div class="contact-card">
-    <div class="contact-item">
-      <span>Email</span>
-      <p>dreamcityglobaltourism@gmail.com</p>
+<section class="sec" id="about" style="background:var(--paper)">
+  <div class="wrap about">
+    <div class="collage">
+      <div class="pol"><img src="https://images.unsplash.com/photo-1694716021376-d44da3f54e8a?q=80&w=688&auto=format&fit=crop" alt="Travellers" loading="lazy"><span>Our travellers</span></div>
+      <div class="pol"><img src="https://plus.unsplash.com/premium_photo-1697730150003-26a1d469adb4?q=80&w=1074&auto=format&fit=crop" alt="Kashmir" loading="lazy"><span>Kashmir</span></div>
+      <div class="pol"><img src="https://images.unsplash.com/photo-1574227492706-f65b24c3688a?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Singapore" loading="lazy"><span>Singapore</span></div>
     </div>
-
-    <div class="contact-item">
-      <span>Phone</span>
-      <p>+91 98233 85848</p>
-      <p>+91 73501 34479</p>
-    </div>
-
-    <div class="contact-item">
-      <span>Location</span>
-      <p>Pune, India</p>
-    </div>
-
-    <div class="contact-cta">
-      <p>
-        Have a destination in mind or need help choosing one?
-        Get in touch and our team will assist you with everything.
-      </p>
-      <a href="mailto:dreamcityglobaltourism@gmail.com" class="contact-btn">
-        Get in Touch
-      </a>
+    <div>
+      <h2>Travel should be affordable, whatever your budget</h2>
+      <p>We have built our name on trust, good service and keeping our word to every traveller we help.</p>
+      <p>Whether you know exactly where you want to go or need ideas, the DCGT team plans it so you don’t have to worry about it.</p>
+      <div class="chips"><span>Customized travel</span><span>Support throughout</span><span>India and abroad</span><span>Everything in one place</span></div>
     </div>
   </div>
 </section>
 
-<footer style="background: #0f2027; color: white; padding: 40px 10%; text-align: center;">
-  <p>&copy; 2026 Dream City Global Tourism. Travel with confidence.</p>
-</footer>
+<section class="sec enq photo-bg up" id="enquiry" style="--img:url('https://images.unsplash.com/photo-1574227492706-f65b24c3688a?q=80&w=1600&auto=format&fit=crop')">
+  <div class="wrap"><div class="sec-head"><h2>Tell us where you want to go</h2><p>Pick a destination, add your dates and budget, and send it to us on WhatsApp or email. It takes about a minute.</p></div><a class="btn gold" href="enquiry.html">Plan my trip</a></div>
+</section>
 
-<div class="popup-overlay" id="promo-popup">
-  <div class="popup-content">
-    <span class="close-popup" id="close-popup">&times;</span>
-    <h2><span>Biggest Sale</span> of the Year!</h2>
-    <p>Book now with us and get exclusive discounted coupons for your upcoming dream vacation.</p>
-    <a href="tours.html" class="popup-btn">Get Discounted Coupons</a>
+<section class="sec contact photo-bg up" id="contact" style="--img:url('https://plus.unsplash.com/premium_photo-1697730150003-26a1d469adb4?q=80&w=1600&auto=format&fit=crop')">
+  <div class="wrap">
+    <h2>Ready when you are</h2>
+    <dl>
+      <div><dt>Email</dt><dd><a href="mailto:dreamcityglobaltourism@gmail.com">dreamcityglobaltourism@gmail.com</a></dd></div>
+      <div><dt>Phone</dt><dd><a href="tel:+919823385848">+91 98233 85848</a><br><a href="tel:+917350134479">+91 73501 34479</a></dd></div>
+      <div><dt>Location</dt><dd>Pune, India</dd></div>
+    </dl>
+    <div class="cta" style="justify-content:center"><div class="cta" style="justify-content:center"><a class="btn gold" href="mailto:dreamcityglobaltourism@gmail.com">Email us</a><a class="btn ghost" href="contact.html">More ways to reach us</a></div><a class="btn ghost" href="contact.html">More ways to reach us</a></div>
   </div>
-</div>
+</section>
 
-<script>
-/* ================= SLIDER LOGIC ================= */
-const slides = document.querySelectorAll('.slide');
-const dots = document.querySelectorAll('.dot');
-let current = 0;
-let interval = setInterval(nextSlide, 5000);
-
-function showSlide(i) {
-  slides.forEach(s => s.classList.remove('active'));
-  dots.forEach(d => d.classList.remove('active'));
-  slides[i].classList.add('active');
-  dots[i].classList.add('active');
-  current = i;
-  reset();
-}
-function nextSlide() {
-  showSlide((current + 1) % slides.length);
-}
-function reset() {
-  clearInterval(interval);
-  interval = setInterval(nextSlide, 5000);
-}
-dots.forEach(d => d.onclick = () => showSlide(+d.dataset.slide));
-
-/* Swipe support */
-let startX = 0;
-document.querySelector('.slideshow').addEventListener('touchstart', e => {
-  startX = e.touches[0].clientX;
-},{passive:true});
-document.querySelector('.slideshow').addEventListener('touchend', e => {
-  let endX = e.changedTouches[0].clientX;
-  if (startX - endX > 50) nextSlide();
-  if (endX - startX > 50) showSlide((current - 1 + slides.length) % slides.length);
-},{passive:true});
-
-/* ================= POPUP LOGIC ================= */
-const popup = document.getElementById('promo-popup');
-const closeBtn = document.getElementById('close-popup');
-
-// Show popup after 1.5 seconds of page load
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    popup.classList.add('show');
-  }, 1500);
-});
-
-// Close popup on 'X' click
-closeBtn.addEventListener('click', () => {
-  popup.classList.remove('show');
-});
-
-// Close popup if user clicks outside the white box
-window.addEventListener('click', (e) => {
-  if (e.target === popup) {
-    popup.classList.remove('show');
-  }
-});
-</script>
-
-
-
-
-
-
-<script>
-const menuToggle = document.getElementById('mobile-menu');
-const navList = document.getElementById('nav-list');
-
-menuToggle.addEventListener('click', () => {
-  navList.classList.toggle('active');
-});
-
-// Close the menu automatically when a link is clicked
-document.querySelectorAll('#nav-list a').forEach(link => {
-  link.addEventListener('click', () => {
-    navList.classList.remove('active');
-  });
-});
-</script>
-
+<footer class="foot"><div class="wrap foot-in"><span>&copy; 2026 Dream City Global Tourism</span><span>We plan<i>|</i>You experience<i>|</i>We care</span></div></footer>
+<a class="wa" href="https://wa.me/919823385848?text=Hi%20Dream%20City%2C%20I%27d%20like%20to%20plan%20a%20trip" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M4 3h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H9l-5 4v-4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/></svg><span>Chat on WhatsApp</span></a>
+<script src="site.js" defer></script>
 </body>
 </html>
